@@ -25,5 +25,6 @@ public class GenerateLevel : MonoBehaviour
         zPos += 48;
         yield return new WaitForSeconds(2);
         creatingSection = false;
+        // when you are past the 48 delete previes 
     }
 }
