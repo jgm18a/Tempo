@@ -26,4 +26,9 @@ public class PlayerMove : MonoBehaviour
             }
         }
     }
+    void OnCollisionEnter(Collision collision)
+    {
+        Destroy(collision.collider.gameObject);
+        Destroy(gameObject);
+    }
 }
