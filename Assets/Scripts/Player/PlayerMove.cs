@@ -11,14 +11,14 @@ public class PlayerMove : MonoBehaviour
     {
         transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed, Space.World);
         
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        if (SwipeManager.swipeLeft)
         {
             if (this.gameObject.transform.position.x > LevelBoundary.leftSide)
             {
                 transform.Translate(Vector3.left * Time.deltaTime * leftRightSpeed);
             }
         }
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        if (SwipeManager.swipeRight) 
         {
             if (this.gameObject.transform.position.x < LevelBoundary.rightSide)
             {
